@@ -3,48 +3,69 @@ import { IArticle, ILawyer, IService } from '../types';
 export const mockLawyers: ILawyer[] = [
   {
     id: '1',
-    name: 'Av. Deniz Yılmaz',
-    title: 'Kurucu Ortak',
+    name: 'Av. Onur Demirceylan',
+    title: 'Kurucu Avukat',
     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-    practiceAreas: ['Ceza Hukuku', 'Şirketler Hukuku'],
-    education: ['İstanbul Üniversitesi Hukuk Fakültesi', 'Galatasaray Üniversitesi (Yüksek Lisans)'],
+    practiceAreas: ['İş Hukuku', 'Ceza Hukuku', 'İdare Hukuku'],
+    education: ['İstanbul Üniversitesi Hukuk Fakültesi'],
     barNumber: '34567',
-    email: 'deniz@dshukuk.com',
+    email: 'onur@dshukuk.com',
     linkedin: 'https://linkedin.com'
   },
   {
     id: '2',
-    name: 'Av. Selin Kaya',
-    title: 'Kıdemli Avukat',
+    name: 'Av. Elif Şahin',
+    title: 'Kurucu Avukat',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-    practiceAreas: ['İş Hukuku', 'Aile Hukuku'],
+    practiceAreas: ['Aile Hukuku', 'Gayrimenkul Hukuku', 'Miras Hukuku'],
     education: ['Ankara Üniversitesi Hukuk Fakültesi'],
     barNumber: '45678',
-    email: 'selin@dshukuk.com'
+    email: 'elif@dshukuk.com'
   }
 ];
 
 export const mockServices: IService[] = [
   {
     id: '1',
+    title: 'İş Hukuku',
+    slug: 'is-hukuku',
+    description: 'İşçi-işveren uyuşmazlıkları, işe iade davaları ve iş sözleşmelerinin düzenlenmesi.',
+    icon: 'Briefcase'
+  },
+  {
+    id: '2',
     title: 'Ceza Hukuku',
     slug: 'ceza-hukuku',
     description: 'Ağır ceza, asliye ceza ve sulh ceza davalarında etkin savunma ve hukuki danışmanlık.',
     icon: 'Scale'
   },
   {
-    id: '2',
-    title: 'Şirketler Hukuku',
-    slug: 'sirketler-hukuku',
-    description: 'Şirket kuruluşları, birleşme ve devralmalar, ticari sözleşmelerin hazırlanması.',
-    icon: 'Briefcase'
+    id: '3',
+    title: 'Aile Hukuku',
+    slug: 'aile-hukuku',
+    description: 'Boşanma davaları, velayet, nafaka ve mal paylaşımı uyuşmazlıklarının çözümü.',
+    icon: 'Users'
   },
   {
-    id: '3',
-    title: 'İş Hukuku',
-    slug: 'is-hukuku',
-    description: 'İşçi-işveren uyuşmazlıkları, işe iade davaları ve iş sözleşmelerinin düzenlenmesi.',
-    icon: 'Users'
+    id: '4',
+    title: 'İdare Hukuku',
+    slug: 'idare-hukuku',
+    description: 'İdari işlemlerin iptali ve tam yargı davalarında profesyonel hukuki destek.',
+    icon: 'FileText'
+  },
+  {
+    id: '5',
+    title: 'Gayrimenkul Hukuku',
+    slug: 'gayrimenkul-hukuku',
+    description: 'Tapu iptal, tescil, tahliye ve kira tespit davaları ile gayrimenkul danışmanlığı.',
+    icon: 'Home'
+  },
+  {
+    id: '6',
+    title: 'Miras Hukuku',
+    slug: 'miras-hukuku',
+    description: 'Vasiyetname düzenlenmesi, mirasın reddi, tenkis ve tapu iptal davaları.',
+    icon: 'PenTool'
   }
 ];
 

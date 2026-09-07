@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #0F172A; /* Slate 900 - Lacivert */
-  --color-secondary: #334155; /* Slate 700 - Antrasit */
-  --color-accent: #D4AF37; /* Klasik Altın */
-  --color-accent-hover: #B8860B; /* Koyu Altın */
-  --color-background: #F8FAFC; /* Slate 50 */
-  --color-text-dark: #1E293B; /* Slate 800 */
-  --color-text-light: #64748B; /* Slate 500 */
+  --color-primary: #1A1D20; /* Koyu Arka Plan / Header */
+  --color-secondary: #272A30; /* Koyu Gri */
+  --color-accent: #C6A364; /* Mockup Altın Rengi */
+  --color-accent-hover: #B49253; /* Koyu Altın */
+  --color-background: #FFFFFF; /* Beyaz Ana Arka Plan */
+  --color-cream: #FBF9F4; /* Servisler Bölümü Arka Planı */
+  --color-text-dark: #1E293B; /* Koyu Metin */
+  --color-text-light: #64748B; /* Açık Metin */
   
   --font-serif: var(--font-playfair), Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

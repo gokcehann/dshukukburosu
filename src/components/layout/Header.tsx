@@ -4,35 +4,36 @@ import { Button } from '../ui/Button';
 
 export const Header: React.FC = () => {
   return (
-    <header className="w-full bg-primary text-white sticky top-0 z-50 shadow-md">
+    <header className="absolute top-0 left-0 w-full z-50 bg-transparent text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-28">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-3 group">
-              <span className="text-4xl font-serif text-accent">D.S.</span>
-              <div className="flex flex-col">
-                <span className="text-lg tracking-widest uppercase font-semibold">D.S. Hukuk</span>
-                <span className="text-[10px] text-gray-400 tracking-widest uppercase mt-0.5 group-hover:text-accent transition-colors">
-                  Demirceylan Şahin Hukuk Bürosu
-                </span>
+            <Link href="/" className="flex items-center gap-4 group">
+              <img 
+                src="/logo.png" 
+                alt="D&S Hukuk Bürosu Logo" 
+                className="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
+              />
+              <div className="flex flex-col justify-center items-center sm:items-start mt-1">
+                <span className="text-xl sm:text-[1.4rem] leading-none font-bold tracking-widest text-white uppercase font-['Times_New_Roman',_Times,_serif] drop-shadow-sm mb-1">D&S HUKUK</span>
+                <span className="text-[9px] sm:text-[10px] font-medium tracking-[0.2em] text-gray-200 uppercase leading-snug text-center sm:text-left">DEMİRCEYLAN ŞAHİN<br/>HUKUK BÜROSU</span>
               </div>
             </Link>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-6 items-center flex-1 justify-center">
             {[
               ['Ana Sayfa', '/'],
+              ['Avukatlarımız', '/#avukatlarimiz'],
               ['Hakkımızda', '/hakkimizda'],
-              ['Hizmetler', '/hizmetler'],
-              ['Blog', '/blog'],
-              ['İletişim', '/iletisim'],
-            ].map(([title, url]) => (
+              ['İletişim', '/#iletisim'],
+            ].map(([title, url], idx) => (
               <Link 
                 key={title} 
                 href={url}
-                className="text-sm font-medium text-gray-300 hover:text-accent transition-colors"
+                className={`text-[13px] font-medium transition-all duration-300 relative pb-1 ${idx === 0 ? 'text-white border-b border-[#cfa767]' : 'text-gray-300 hover:text-white'}`}
               >
                 {title}
               </Link>
@@ -40,8 +41,8 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center">
-            <Button variant="primary" href="/iletisim">
+          <div className="hidden md:flex items-center justify-end">
+            <Button variant="primary" href="/#iletisim" className="bg-[#cfa767] hover:bg-[#b38f56] text-white font-medium px-6 py-2.5 text-[13px] tracking-wide transition-all duration-300 rounded-sm border-none shadow-none">
               Danışma Talebi
             </Button>
           </div>
