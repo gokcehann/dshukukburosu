@@ -19,6 +19,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dshukukerzurum.com"),
   title: {
     template: "%s | D.S. Hukuk Bürosu",
     default: "D.S. Hukuk Bürosu | Profesyonel Hukuki Danışmanlık",
@@ -36,8 +37,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "D.S. Hukuk Bürosu",
-  "image": "https://dshukuk.com/logo.png",
-  "url": "https://dshukuk.com",
+  "image": "https://dshukukerzurum.com/logo.png",
+  "url": "https://dshukukerzurum.com",
   "telephone": "+902125550123",
   "address": {
     "@type": "PostalAddress",

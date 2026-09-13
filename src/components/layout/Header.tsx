@@ -66,10 +66,22 @@ export const Header: React.FC = () => {
                 // Ana sayfa için tam eşleşme, diğer sayfalar için normal eşleşme (çapa linkleri hariç)
                 const isActive = url === '/' ? pathname === '/' : pathname === url;
                 
+                const handleClick = (e: React.MouseEvent) => {
+                  if (url.startsWith('/#') && pathname === '/') {
+                    e.preventDefault();
+                    const targetId = url.replace('/#', '');
+                    const element = document.getElementById(targetId);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }
+                };
+                
                 return (
                   <Link 
                     key={title} 
                     href={url}
+                    onClick={handleClick}
                     className={`text-[14px] font-medium transition-all duration-300 relative pb-1 ${isActive ? 'text-white border-b border-[#cfa767]' : 'text-gray-300 hover:text-white'}`}
                   >
                     {title}
@@ -112,16 +124,30 @@ export const Header: React.FC = () => {
           </div>
           
           <div className="flex flex-col items-center space-y-6 sm:space-y-8">
-            {navLinks.map(([title, url]) => (
-              <Link 
-                key={title} 
-                href={url}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-xl sm:text-2xl lg:text-3xl font-['Times_New_Roman',_Times,_serif] tracking-widest text-gray-300 hover:text-white transition-all duration-300 uppercase hover:scale-105"
-              >
-                {title}
-              </Link>
-            ))}
+            {navLinks.map(([title, url]) => {
+              const handleMobileClick = (e: React.MouseEvent) => {
+                if (url.startsWith('/#') && pathname === '/') {
+                  e.preventDefault();
+                  const targetId = url.replace('/#', '');
+                  const element = document.getElementById(targetId);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
+                setIsMenuOpen(false);
+              };
+
+              return (
+                <Link 
+                  key={title} 
+                  href={url}
+                  onClick={handleMobileClick}
+                  className="text-xl sm:text-2xl lg:text-3xl font-['Times_New_Roman',_Times,_serif] tracking-widest text-gray-300 hover:text-white transition-all duration-300 uppercase hover:scale-105"
+                >
+                  {title}
+                </Link>
+              );
+            })}
           </div>
           
           <div className="mt-10 sm:mt-12 flex flex-col items-center space-y-3 pt-8 border-t border-white/10 w-full max-w-xs">

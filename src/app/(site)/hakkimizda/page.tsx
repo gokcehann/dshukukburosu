@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className="bg-primary py-16 md:py-24 text-center">
+      <div className="bg-primary pt-36 pb-20 md:pt-48 md:pb-28 text-center flex flex-col items-center justify-center">
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Hakkımızda</h1>
-        <div className="w-24 h-1 bg-accent mx-auto"></div>
+        <div className="w-24 h-1 bg-accent mx-auto mt-2"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -36,9 +36,6 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif font-bold text-primary mb-4">Avukatlarımız</h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-text-light max-w-2xl mx-auto">
-            Her biri kendi alanında uzman, dinamik ve tecrübeli ekibimizle yanınızdayız.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -48,12 +45,11 @@ export default function AboutPage() {
                  <img src={lawyer.image} alt={lawyer.name} className="w-full h-full object-cover" />
               </div>
               <CardBody>
-                <h3 className="text-2xl font-serif font-bold text-primary mb-1">{lawyer.name}</h3>
-                <p className="text-accent font-medium mb-4">{lawyer.title}</p>
+                <h3 className="text-2xl font-serif font-bold text-primary mb-4">{lawyer.name}</h3>
                 
                 <div className="space-y-3 text-sm text-text-light">
                   <div>
-                    <span className="font-semibold text-text-dark block">Uzmanlık Alanları:</span>
+                    <span className="font-semibold text-text-dark block">Çalışma Alanları:</span>
                     {lawyer.practiceAreas.join(', ')}
                   </div>
                   <div>

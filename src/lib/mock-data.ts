@@ -5,22 +5,22 @@ export const mockLawyers: ILawyer[] = [
     id: '1',
     name: 'Av. Onur Demirceylan',
     title: 'Kurucu Avukat',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-    practiceAreas: ['İş Hukuku', 'Ceza Hukuku', 'İdare Hukuku'],
-    education: ['İstanbul Üniversitesi Hukuk Fakültesi'],
-    barNumber: '34567',
+    image: '/no_user.png',
+    practiceAreas: ['İş Hukuku', 'Gayrimenkul Hukuku', 'Aile Hukuku', 'Ceza Hukuku', 'Çevre Hukuku', 'Spor Hukuku', 'Basın Hukuku', 'İdare ve Vergi Hukuku'],
+    education: ['Doğu Akdeniz Üniversitesi'],
+    barNumber: '903',
     email: 'onur@dshukuk.com',
     linkedin: 'https://linkedin.com'
   },
   {
     id: '2',
-    name: 'Av. Elif Şahin',
+    name: 'Av. Arb. Muhammed Melih Şahin',
     title: 'Kurucu Avukat',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-    practiceAreas: ['Aile Hukuku', 'Gayrimenkul Hukuku', 'Miras Hukuku'],
-    education: ['Ankara Üniversitesi Hukuk Fakültesi'],
-    barNumber: '45678',
-    email: 'elif@dshukuk.com'
+    image: '/no_user.png',
+    practiceAreas: ['İş Hukuku', 'Gayrimenkul Hukuku', 'Aile Hukuku', 'Ceza Hukuku', 'Çevre Hukuku', 'Spor Hukuku', 'Basın Hukuku', 'İdare ve Vergi Hukuku'],
+    education: ['Erzincan Üniversitesi'],
+    barNumber: '911',
+    email: 'melih@dshukuk.com'
   }
 ];
 
@@ -48,9 +48,9 @@ export const mockServices: IService[] = [
   },
   {
     id: '4',
-    title: 'İdare Hukuku',
-    slug: 'idare-hukuku',
-    description: 'İdari işlemlerin iptali ve tam yargı davalarında profesyonel hukuki destek.',
+    title: 'İdare ve Vergi Hukuku',
+    slug: 'idare-ve-vergi-hukuku',
+    description: 'İdari işlemlerin iptali, tam yargı ve vergi uyuşmazlıklarında profesyonel hukuki destek.',
     icon: 'FileText'
   },
   {
@@ -66,6 +66,27 @@ export const mockServices: IService[] = [
     slug: 'miras-hukuku',
     description: 'Vasiyetname düzenlenmesi, mirasın reddi, tenkis ve tapu iptal davaları.',
     icon: 'PenTool'
+  },
+  {
+    id: '7',
+    title: 'Çevre Hukuku',
+    slug: 'cevre-hukuku',
+    description: 'Çevre mevzuatından kaynaklanan uyuşmazlıklar ve idari yaptırımlara karşı hukuki danışmanlık.',
+    icon: 'Scale'
+  },
+  {
+    id: '8',
+    title: 'Spor Hukuku',
+    slug: 'spor-hukuku',
+    description: 'Sporcuların, kulüplerin ve federasyonların hukuki süreçlerinde danışmanlık ve temsil.',
+    icon: 'Users'
+  },
+  {
+    id: '9',
+    title: 'Basın Hukuku',
+    slug: 'basin-hukuku',
+    description: 'Medya organları ve basın mensuplarının hakları, tekzip ve tazminat davaları.',
+    icon: 'FileText'
   }
 ];
 

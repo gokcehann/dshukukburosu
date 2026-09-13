@@ -88,15 +88,7 @@ export default function HomePage() {
                   </div>
                   <div className="pt-6">
                     <h3 className="text-xl font-serif font-bold text-primary">{lawyer.name}</h3>
-                    <p className="text-accent text-sm mb-4">{lawyer.title}</p>
-                    <div className="w-8 h-px bg-accent mb-4"></div>
-                    <ul className="space-y-2 text-sm text-text-light">
-                      {lawyer.practiceAreas.map((area, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
-                          <Briefcase className="w-3 h-3 text-accent" /> {area}
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="w-8 h-px bg-accent mb-4 mt-4"></div>
                   </div>
                 </div>
               ))}
@@ -109,17 +101,16 @@ export default function HomePage() {
       {/* Çalışma Alanlarımız */}
       <section id="calisma-alanlari" className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-accent font-semibold tracking-widest text-sm uppercase mb-2">ÇALIŞMA ALANLARIMIZ</h3>
           <h2 className="text-4xl font-serif font-bold text-primary mb-16">Uzmanlık Alanlarımız</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mockServices.map((service) => (
-              <div key={service.id} className="bg-white p-8 flex flex-col items-center justify-center text-center group cursor-pointer hover:shadow-xl transition-shadow border border-gray-50 h-56">
-                <div className="mb-6 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">
+              <div key={service.id} className="bg-white p-6 flex items-center gap-4 group cursor-pointer hover:shadow-lg transition-all border border-gray-50 rounded-sm">
+                <div className="opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all shrink-0">
                   {getIcon(service.icon)}
                 </div>
-                <h3 className="font-semibold text-primary mb-4">{service.title}</h3>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors" />
+                <h3 className="font-semibold text-primary flex-1 text-left">{service.title}</h3>
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-accent group-hover:translate-x-1 transition-all shrink-0" />
               </div>
             ))}
           </div>

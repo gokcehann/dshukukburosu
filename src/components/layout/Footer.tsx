@@ -48,38 +48,47 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Üst Kısım: Sütunlar */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-6">
 
           {/* 1. Logo */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center lg:col-span-1">
             <img src="/logo.png" alt="D&S Logo" className="h-35 w-auto object-contain self-start opacity-90" />
           </div>
 
           {/* 2. Hızlı Menü */}
-          <div>
+          <div className="lg:col-span-1">
+            <h4 className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">Sayfalar</h4>
             <ul className="space-y-2.5 text-[11px] md:text-xs">
-              <li><a href="/" className="hover:text-white transition-colors">Ana Sayfa</a></li>
-              <li><a href="/hakkimizda" className="hover:text-white transition-colors">Hakkımızda</a></li>
-              <li><a href="/#avukatlarimiz" className="hover:text-white transition-colors">Avukatlarımız</a></li>
-              <li><a href="/blog" className="hover:text-white transition-colors">Makaleler</a></li>
-              <li><a href="/iletisim" className="hover:text-white transition-colors">İletişim</a></li>
+              <li><a href="/" className="hover:text-white text-gray-400 transition-colors">Ana Sayfa</a></li>
+              <li><a href="/hakkimizda" className="hover:text-white text-gray-400 transition-colors">Hakkımızda</a></li>
+              <li><a href="/#avukatlarimiz" className="hover:text-white text-gray-400 transition-colors">Avukatlarımız</a></li>
+              <li><a href="/blog" className="hover:text-white text-gray-400 transition-colors">Makaleler</a></li>
+              <li><a href="/iletisim" className="hover:text-white text-gray-400 transition-colors">İletişim</a></li>
             </ul>
           </div>
 
-          {/* 3. Çalışma Alanlarımız (Örnek) */}
-          <div>
+          {/* 3. Çalışma Alanlarımız */}
+          <div className="lg:col-span-2">
             <h4 className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">Uzmanlık Alanları</h4>
-            <ul className="space-y-2.5 text-[11px] md:text-xs text-gray-400">
-              <li>Ceza Hukuku</li>
-              <li>Aile Hukuku</li>
-              <li>İş Hukuku</li>
-              <li>Ticaret Hukuku</li>
-              <li>Gayrimenkul Hukuku</li>
-            </ul>
+            <div className="grid grid-cols-2 gap-4">
+              <ul className="space-y-2.5 text-[11px] md:text-xs text-gray-400">
+                <li>İş Hukuku</li>
+                <li>Ceza Hukuku</li>
+                <li>Aile Hukuku</li>
+                <li>İdare ve Vergi Hukuku</li>
+                <li>Gayrimenkul Hukuku</li>
+              </ul>
+              <ul className="space-y-2.5 text-[11px] md:text-xs text-gray-400">
+                <li>Miras Hukuku</li>
+                <li>Çevre Hukuku</li>
+                <li>Spor Hukuku</li>
+                <li>Basın Hukuku</li>
+              </ul>
+            </div>
           </div>
 
           {/* 4. İletişim Bilgileri */}
-          <div>
+          <div className="lg:col-span-1">
             <h4 className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">İletişim</h4>
             <ul className="space-y-2.5 text-[11px] md:text-xs text-gray-400">
               <li className="flex gap-3">
