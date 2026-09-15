@@ -21,10 +21,10 @@ export default function AboutPage() {
             <h2 className="text-3xl font-serif font-bold text-primary mb-6">Kurumsal Vizyonumuz</h2>
             <div className="prose text-text-light">
               <p className="mb-4">
-                D.S. Hukuk Bürosu, adaletin tecellisine katkıda bulunmak ve müvekkillerine en yüksek standartlarda hukuki hizmet sunmak amacıyla kurulmuştur.
+                D&S Hukuk Bürosu, adaletin tecellisine katkı sağlama gayesiyle, kişi ve kurumlara yönelik hukuki danışmanlık ve avukatlık hizmetleri sunmaktadır. Faaliyetlerimizde temel prensibimiz, her müvekkilin hukuki durumunu titizlikle analiz ederek, mevcut yasal düzenlemeler çerçevesinde sonuç odaklı hukuki çözümler üretmektir.
               </p>
               <p>
-                Temel prensibimiz, her müvekkilimizin durumunu titizlikle analiz etmek ve onlara özel, yenilikçi ve sonuç odaklı çözümler üretmektir. Şeffaflık ve güven, çalışma anlayışımızın temelini oluşturur.
+                Avukatlık meslek kurallarına ve etik değerlere tam uyumla çalışan büromuz; şeffaflık, güven ve sır saklama yükümlülüklerini çalışma anlayışının merkezine almaktadır. Hukuki uyuşmazlıkların çözüm süreçlerinde, güncel mevzuat ve içtihatlar ışığında, somut olaya özgü hukuki destek sağlamaktayız. Amacımız, hak arama hürriyetinin etkin kullanılması sürecinde, mesleki özen ve dikkat yükümlülüğüne bağlı kalarak hukuki süreçlerinizi yürütebilmektir.
               </p>
             </div>
           </div>
@@ -48,10 +48,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-serif font-bold text-primary mb-4">{lawyer.name}</h3>
                 
                 <div className="space-y-3 text-sm text-text-light">
-                  <div>
-                    <span className="font-semibold text-text-dark block">Çalışma Alanları:</span>
-                    {lawyer.practiceAreas.join(', ')}
-                  </div>
+
                   <div>
                     <span className="font-semibold text-text-dark block">Eğitim:</span>
                     <ul className="list-disc list-inside">
@@ -64,6 +61,14 @@ export default function AboutPage() {
                     <span className="font-semibold text-text-dark">Baro Sicil No: </span>
                     {lawyer.barNumber}
                   </div>
+                  {lawyer.phone && (
+                    <div>
+                      <span className="font-semibold text-text-dark">Telefon: </span>
+                      <a href={`tel:${lawyer.phone.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">
+                        {lawyer.phone}
+                      </a>
+                    </div>
+                  )}
                 </div>
               </CardBody>
             </Card>

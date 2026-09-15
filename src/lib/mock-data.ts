@@ -5,22 +5,24 @@ export const mockLawyers: ILawyer[] = [
     id: '1',
     name: 'Av. Onur Demirceylan',
     title: 'Kurucu Avukat',
-    image: '/no_user.png',
+    image: '/images/team/onur.png',
     practiceAreas: ['İş Hukuku', 'Gayrimenkul Hukuku', 'Aile Hukuku', 'Ceza Hukuku', 'Çevre Hukuku', 'Spor Hukuku', 'Basın Hukuku', 'İdare ve Vergi Hukuku'],
     education: ['Doğu Akdeniz Üniversitesi'],
     barNumber: '903',
     email: 'onur@dshukuk.com',
+    phone: '+90 532 681 43 45',
     linkedin: 'https://linkedin.com'
   },
   {
     id: '2',
-    name: 'Av. Arb. Muhammed Melih Şahin',
+    name: 'Av. Muhammed Melih Şahin',
     title: 'Kurucu Avukat',
-    image: '/no_user.png',
+    image: '/images/team/melih.png',
     practiceAreas: ['İş Hukuku', 'Gayrimenkul Hukuku', 'Aile Hukuku', 'Ceza Hukuku', 'Çevre Hukuku', 'Spor Hukuku', 'Basın Hukuku', 'İdare ve Vergi Hukuku'],
     education: ['Erzincan Üniversitesi'],
     barNumber: '911',
-    email: 'melih@dshukuk.com'
+    email: 'melih@dshukuk.com',
+    phone: '+90 532 563 10 73'
   }
 ];
 

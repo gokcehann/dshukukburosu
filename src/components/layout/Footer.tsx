@@ -112,9 +112,12 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Alt Çizgi ve Telif Hakkı */}
-        <div className="pt-4 border-t border-white/10 flex justify-center items-center">
-          <p className="text-gray-500 text-[10px] sm:text-xs text-center">
+        <div className="pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-2">
+          <p className="text-gray-500 text-[10px] sm:text-xs text-center md:text-left">
             &copy; {new Date().getFullYear()} D&S Hukuk - Demirceylan & Şahin Hukuk Bürosu. Tüm hakları saklıdır.
+          </p>
+          <p className="text-gray-500 text-[10px] sm:text-xs text-center md:text-right">
+            Designed by Gökçehan Özdemir
           </p>
         </div>
       </div>

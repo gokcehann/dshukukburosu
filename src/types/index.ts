@@ -19,6 +19,7 @@ export interface ILawyer {
   education: string[];
   barNumber: string;
   email: string;
+  phone?: string;
   linkedin?: string;
 }
 
