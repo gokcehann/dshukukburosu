@@ -21,13 +21,13 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dshukukerzurum.com"),
   title: {
-    template: "%s | D.S. Hukuk Bürosu",
-    default: "D.S. Hukuk Bürosu | Profesyonel Hukuki Danışmanlık",
+    template: "%s | D&S Hukuk Bürosu",
+    default: "D&S Hukuk Bürosu",
   },
-  description: "D.S. Hukuk Bürosu, uzman avukat kadrosuyla ceza hukuku, şirketler hukuku ve iş hukuku alanlarında güvenilir ve sonuç odaklı hizmet sunar.",
+  description: "D&S Hukuk Bürosu, uzman avukat kadrosuyla ceza hukuku, şirketler hukuku ve iş hukuku alanlarında güvenilir ve sonuç odaklı hizmet sunar.",
   openGraph: {
-    title: "D.S. Hukuk Bürosu | Profesyonel Hukuki Danışmanlık",
-    description: "D.S. Hukuk Bürosu, uzman avukat kadrosuyla ceza hukuku, şirketler hukuku ve iş hukuku alanlarında güvenilir ve sonuç odaklı hizmet sunar.",
+    title: "D&S Hukuk Bürosu",
+    description: "D&S Hukuk Bürosu, uzman avukat kadrosuyla ceza hukuku, şirketler hukuku ve iş hukuku alanlarında güvenilir ve sonuç odaklı hizmet sunar.",
     locale: "tr_TR",
     type: "website",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  "name": "D.S. Hukuk Bürosu",
+  "name": "D&S Hukuk Bürosu",
   "image": "https://dshukukerzurum.com/logo.png",
   "url": "https://dshukukerzurum.com",
   "telephone": "+902125550123",
