@@ -103,7 +103,7 @@ export default function ContactPage() {
                   <MapPin className="text-[#cfa767] w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-white text-[11px] md:text-xs tracking-[0.15em] uppercase font-semibold mb-2">Açık Adres</h3>
+                  <h3 className="text-white text-[11px] md:text-xs tracking-[0.15em] uppercase font-semibold mb-2">Adres</h3>
                   <p className="text-gray-400 text-[13px] md:text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
                     Ömer Nasuhi Bilmen Mh. İstanbul Kapı Cd. Gümrük Sk. (Cubpa arkası) Necati Kervancı Apt. K:6/13 25100 Yakutiye/ERZURUM
                   </p>

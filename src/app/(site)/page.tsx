@@ -44,7 +44,7 @@ export default function HomePage() {
               Hukuki sorunlarınıza profesyonel, hızlı ve etkili çözümler sunuyoruz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/#iletisim" variant="outline" className="px-8 py-4 border-white text-white hover:bg-accent hover:border-accent hover:text-white rounded-none transition-all duration-300">
+              <Button href="https://wa.me/905326814345" target="_blank" rel="noopener noreferrer" variant="outline" className="px-8 py-4 border-white text-white hover:bg-accent hover:border-accent hover:text-white rounded-none transition-all duration-300">
                 İletişime Geçin
               </Button>
             </div>
@@ -110,7 +110,6 @@ export default function HomePage() {
                   {getIcon(service.icon)}
                 </div>
                 <h3 className="font-semibold text-primary flex-1 text-left">{service.title}</h3>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-accent group-hover:translate-x-1 transition-all shrink-0" />
               </div>
             ))}
           </div>

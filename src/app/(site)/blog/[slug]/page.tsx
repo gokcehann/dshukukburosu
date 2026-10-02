@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           </header>
           
-          <div className="prose prose-lg max-w-none text-gray-600 prose-headings:text-primary prose-a:text-accent hover:prose-a:text-primary transition-colors prose-img:rounded-lg">
+          <div className="prose prose-lg max-w-none text-gray-600 prose-headings:text-primary prose-a:text-accent hover:prose-a:text-primary transition-colors prose-img:rounded-lg text-justify">
             {post.body ? (
               <PortableText value={post.body} />
             ) : (
