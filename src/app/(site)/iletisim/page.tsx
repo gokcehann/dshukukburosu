@@ -98,7 +98,7 @@ export default function ContactPage() {
 
             <div className="mb-16 divide-y divide-white/5 bg-[#11181c] rounded-sm border border-white/5 shadow-sm">
               {/* Adres Kartı */}
-              <a href="https://maps.app.goo.gl/AdUHwUWpqg55JBdk6?g_st=iw" target="_blank" rel="noopener noreferrer" className="group flex items-start p-6 sm:p-8">
+              <a href="https://maps.app.goo.gl/AdUHwUWpqg55JBdk6?g_st=iw" target="_blank" rel="noopener noreferrer" title="Google Haritalar'da D&S Hukuk Bürosu Yol Tarifi ve Konum" className="group flex items-start p-6 sm:p-8">
                 <div className="w-12 h-12 rounded-full bg-[#0a0f13] border border-[#cfa767]/20 flex items-center justify-center flex-shrink-0 mr-5 group-hover:bg-[#cfa767]/10 transition-colors">
                   <MapPin className="text-[#cfa767] w-5 h-5" />
                 </div>
@@ -120,19 +120,19 @@ export default function ContactPage() {
                   <div className="space-y-3">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center group">
                       <span className="text-gray-500 text-xs sm:text-sm mb-1 sm:mb-0">Av. Onur Demirceylan</span>
-                      <a href="tel:+905326814345" className="text-gray-300 text-[13px] md:text-sm hover:text-[#cfa767] transition-colors font-medium">+90 532 681 43 45</a>
+                      <a href="tel:+905326814345" title="Av. Onur Demirceylan Telefon: +90 532 681 43 45" className="text-gray-300 text-[13px] md:text-sm hover:text-[#cfa767] transition-colors font-medium">+90 532 681 43 45</a>
                     </div>
                     <div className="w-full h-px bg-white/5"></div>
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center group">
                       <span className="text-gray-500 text-xs sm:text-sm mb-1 sm:mb-0">Av. M. Melih Şahin</span>
-                      <a href="tel:+905325631073" className="text-gray-300 text-[13px] md:text-sm hover:text-[#cfa767] transition-colors font-medium">+90 532 563 10 73</a>
+                      <a href="tel:+905325631073" title="Av. Muhammed Melih Şahin Telefon: +90 532 563 10 73" className="text-gray-300 text-[13px] md:text-sm hover:text-[#cfa767] transition-colors font-medium">+90 532 563 10 73</a>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* E-posta Kartı */}
-              <a href="mailto:dshukukburosu@outlook.com" className="group flex items-center p-6 sm:p-8">
+              <a href="mailto:dshukukburosu@outlook.com" title="D&S Hukuk Bürosu E-posta Gönder: dshukukburosu@outlook.com" className="group flex items-center p-6 sm:p-8">
                 <div className="w-12 h-12 rounded-full bg-[#0a0f13] border border-[#cfa767]/20 flex items-center justify-center flex-shrink-0 mr-5 group-hover:bg-[#cfa767]/10 transition-colors">
                   <Mail className="text-[#cfa767] w-5 h-5" />
                 </div>
@@ -168,12 +168,12 @@ export default function ContactPage() {
                 <div className="group">
                   <h4 className="text-lg md:text-xl font-['Times_New_Roman',_Times,_serif] text-white group-hover:text-[#cfa767] transition-colors mb-1">Av. Onur Demirceylan</h4>
                   <div className="w-8 h-px bg-white/20 mb-3 group-hover:bg-[#cfa767] transition-colors"></div>
-                  <a href="tel:+905326814345" className="inline-block text-[13px] text-gray-400 hover:text-white transition-colors">+90 532 681 43 45</a>
+                  <a href="tel:+905326814345" title="Av. Onur Demirceylan Telefon: +90 532 681 43 45" className="inline-block text-[13px] text-gray-400 hover:text-white transition-colors">+90 532 681 43 45</a>
                 </div>
                 <div className="group">
                   <h4 className="text-lg md:text-xl font-['Times_New_Roman',_Times,_serif] text-white group-hover:text-[#cfa767] transition-colors mb-1">Av. Muhammed Melih Şahin</h4>
                   <div className="w-8 h-px bg-white/20 mb-3 group-hover:bg-[#cfa767] transition-colors"></div>
-                  <a href="tel:+905325631073" className="inline-block text-[13px] text-gray-400 hover:text-white transition-colors">+90 532 563 10 73</a>
+                  <a href="tel:+905325631073" title="Av. Muhammed Melih Şahin Telefon: +90 532 563 10 73" className="inline-block text-[13px] text-gray-400 hover:text-white transition-colors">+90 532 563 10 73</a>
                 </div>
               </div>
             </div>

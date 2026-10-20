@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda",
-  description: "D.S. Hukuk Bürosu kurumsal vizyonu ve uzman avukat kadromuz hakkında bilgi edinin.",
+  title: "Hakkımızda - Kurumsal Bilgilerimiz",
+  description: "D&S Hukuk Bürosu kurumsal vizyonu, çalışma prensipleri ve Erzurum uzman avukat kadromuz hakkında detaylı bilgi edinin.",
 };
 
 export default function AboutPage() {

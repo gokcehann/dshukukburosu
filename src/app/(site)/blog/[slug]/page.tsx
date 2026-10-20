@@ -31,7 +31,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <div className="bg-primary min-h-screen pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <Link href="/blog" className="text-accent hover:text-white transition-colors text-sm font-medium mb-8 inline-flex items-center gap-2">
+        <Link href="/blog" title="Tüm Hukuki Makalelere Dön" className="text-accent hover:text-white transition-colors text-sm font-medium mb-8 inline-flex items-center gap-2">
           &larr; Makalelere Dön
         </Link>
 

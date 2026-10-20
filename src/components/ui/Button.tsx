@@ -27,8 +27,9 @@ export const Button: React.FC<ButtonProps> = ({
   const styles = `${baseStyles} ${variants[variant]} ${className}`;
 
   if (href) {
+    const linkTitle = props.title || (typeof children === 'string' ? children : undefined);
     return (
-      <Link href={href} className={styles} target={props.target} rel={props.rel}>
+      <Link href={href} className={styles} target={props.target} rel={props.rel} title={linkTitle}>
         {children}
       </Link>
     );

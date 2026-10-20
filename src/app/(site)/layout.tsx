@@ -19,17 +19,21 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dshukukerzurum.com"),
+  metadataBase: new URL("https://www.dshukukerzurum.com"),
   title: {
     template: "%s | D&S Hukuk Bürosu",
-    default: "D&S Hukuk Bürosu",
+    default: "D&S Hukuk Bürosu | Erzurum Avukatlık ve Hukuki Danışmanlık",
   },
   description: "D&S Hukuk Bürosu, uzman avukat kadrosuyla ceza hukuku, şirketler hukuku ve iş hukuku alanlarında güvenilir ve sonuç odaklı hizmet sunar.",
+  alternates: {
+    canonical: "https://www.dshukukerzurum.com",
+  },
   openGraph: {
-    title: "D&S Hukuk Bürosu",
+    title: "D&S Hukuk Bürosu | Erzurum Avukatlık ve Hukuki Danışmanlık",
     description: "D&S Hukuk Bürosu, uzman avukat kadrosuyla ceza hukuku, şirketler hukuku ve iş hukuku alanlarında güvenilir ve sonuç odaklı hizmet sunar.",
     locale: "tr_TR",
     type: "website",
+    url: "https://www.dshukukerzurum.com",
   },
 };
 
@@ -37,8 +41,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "D&S Hukuk Bürosu",
-  "image": "https://dshukukerzurum.com/logo.png",
-  "url": "https://dshukukerzurum.com",
+  "image": "https://www.dshukukerzurum.com/logo.png",
+  "url": "https://www.dshukukerzurum.com",
   "telephone": "+905326814345",
   "priceRange": "$$",
   "address": {

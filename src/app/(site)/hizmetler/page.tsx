@@ -41,7 +41,7 @@ export default function ServicesPage() {
               </CardHeader>
               <CardBody>
                 <p className="text-text-light mb-6">{service.description}</p>
-                <Link href={`/hizmetler/${service.slug}`} className="text-accent font-medium hover:text-accent-hover flex items-center transition-colors">
+                <Link href={`/hizmetler/${service.slug}`} title={`${service.title} - Hizmet Detayları`} className="text-accent font-medium hover:text-accent-hover flex items-center transition-colors">
                   Detaylı İncele <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </CardBody>

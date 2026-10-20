@@ -40,7 +40,7 @@ export default async function BlogIndexPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post: any) => (
-              <Link href={`/blog/${post.slug?.current || ''}`} key={post._id} className="group">
+              <Link href={`/blog/${post.slug?.current || ''}`} key={post._id} title={post.title} className="group">
                 <article className="bg-white border border-gray-100 rounded-lg overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col">
                   
                   {/* Görsel Alanı */}

@@ -57,20 +57,20 @@ export const Footer: React.FC = () => {
 
           {/* 2. Hızlı Menü */}
           <div className="lg:col-span-1">
-            <h4 className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">Sayfalar</h4>
+            <p className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">Sayfalar</p>
             <ul className="space-y-2.5 text-[11px] md:text-xs">
-              <li><a href="/" className="hover:text-white text-gray-400 transition-colors">Ana Sayfa</a></li>
-              <li><a href="/hakkimizda" className="hover:text-white text-gray-400 transition-colors">Hakkımızda</a></li>
-              <li><a href="/#avukatlarimiz" className="hover:text-white text-gray-400 transition-colors">Avukatlarımız</a></li>
-              <li><a href="/#yorumlar" className="hover:text-white text-gray-400 transition-colors">Google Yorumları</a></li>
-              <li><a href="/blog" className="hover:text-white text-gray-400 transition-colors">Makaleler</a></li>
-              <li><a href="/iletisim" className="hover:text-white text-gray-400 transition-colors">İletişim</a></li>
+              <li><a href="/" title="D&S Hukuk Bürosu Ana Sayfa" className="hover:text-white text-gray-400 transition-colors">Ana Sayfa</a></li>
+              <li><a href="/hakkimizda" title="D&S Hukuk Bürosu Hakkımızda" className="hover:text-white text-gray-400 transition-colors">Hakkımızda</a></li>
+              <li><a href="/#avukatlarimiz" title="D&S Hukuk Kurucu Avukatlarımız" className="hover:text-white text-gray-400 transition-colors">Avukatlarımız</a></li>
+              <li><a href="/#yorumlar" title="Google Müvekkil Yorumları ve Değerlendirmeleri" className="hover:text-white text-gray-400 transition-colors">Google Yorumları</a></li>
+              <li><a href="/blog" title="Hukuki Makaleler ve Güncel Bilgiler" className="hover:text-white text-gray-400 transition-colors">Makaleler</a></li>
+              <li><a href="/iletisim" title="D&S Hukuk Bürosu İletişim Bilgileri" className="hover:text-white text-gray-400 transition-colors">İletişim</a></li>
             </ul>
           </div>
 
           {/* 3. Çalışma Alanlarımız */}
           <div className="lg:col-span-2">
-            <h4 className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">Uzmanlık Alanları</h4>
+            <p className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">Uzmanlık Alanları</p>
             <div className="grid grid-cols-2 gap-4">
               <ul className="space-y-2.5 text-[11px] md:text-xs text-gray-400">
                 <li>İş Hukuku</li>
@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
 
           {/* 4. İletişim Bilgileri */}
           <div className="lg:col-span-1">
-            <h4 className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">İletişim</h4>
+            <p className="text-white text-[11px] font-semibold tracking-widest uppercase mb-3">İletişim</p>
             <ul className="space-y-2.5 text-[11px] md:text-xs text-gray-400">
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 text-accent flex-shrink-0" />
@@ -99,13 +99,13 @@ export const Footer: React.FC = () => {
               <li className="flex gap-3">
                 <Phone className="w-4 h-4 text-accent flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:+905326814345" className="hover:text-white">+90 532 681 43 45</a>
-                  <a href="tel:+905325631073" className="hover:text-white">+90 532 563 10 73</a>
+                  <a href="tel:+905326814345" title="Av. Onur Demirceylan Telefon: +90 532 681 43 45" className="hover:text-white">+90 532 681 43 45</a>
+                  <a href="tel:+905325631073" title="Av. Muhammed Melih Şahin Telefon: +90 532 563 10 73" className="hover:text-white">+90 532 563 10 73</a>
                 </div>
               </li>
               <li className="flex gap-3">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
-                <a href="mailto:dshukukburosu@outlook.com" className="hover:text-white">dshukukburosu@outlook.com</a>
+                <a href="mailto:dshukukburosu@outlook.com" title="D&S Hukuk Bürosu E-posta: dshukukburosu@outlook.com" className="hover:text-white">dshukukburosu@outlook.com</a>
               </li>
             </ul>
           </div>

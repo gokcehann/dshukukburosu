@@ -81,6 +81,7 @@ export const GoogleReviews: React.FC = () => {
               href={googleReviewsSummary.googleReviewWriteUrl}
               target="_blank"
               rel="noopener noreferrer"
+              title="Google Haritalar'da D&S Hukuk Bürosu İçin Değerlendirme ve Yorum Yazın"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-semibold rounded-lg bg-accent text-white hover:bg-accent-hover transition-colors shadow-sm"
             >
               <PenLine className="w-4 h-4" />
@@ -90,6 +91,7 @@ export const GoogleReviews: React.FC = () => {
               href={googleReviewsSummary.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
+              title="Google Haritalar Üzerinde D&S Hukuk Bürosu Profilini İnceleyin"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-semibold rounded-lg bg-white text-text-dark hover:bg-gray-50 transition-colors border border-gray-200/80 shadow-sm"
             >
               <GoogleIcon className="w-4 h-4" />
@@ -127,6 +129,7 @@ export const GoogleReviews: React.FC = () => {
                 href={googleReviewsSummary.googleReviewWriteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Google Haritalar'da D&S Hukuk İçin Yorum Bırakın"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-none bg-accent text-white font-medium hover:bg-accent-hover transition-colors shadow-lg cursor-pointer"
               >
                 <PenLine className="w-4 h-4" />
@@ -136,6 +139,7 @@ export const GoogleReviews: React.FC = () => {
                 href={googleReviewsSummary.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Google Haritalar D&S Hukuk Bürosu Resmi Profilini Açın"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-none border border-white/30 text-white font-medium hover:bg-white/10 transition-colors cursor-pointer"
               >
                 <span>Google Haritalar Profili</span>

@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
           <div className="relative flex justify-center items-center h-24">
             {/* Logo Left */}
             <div className="absolute left-0 flex items-center">
-              <Link href="/" className="flex items-center gap-4 group">
+              <Link href="/" title="D&S Hukuk Bürosu Ana Sayfa" className="flex items-center gap-4 group">
                 <img 
                   src="/logo.png" 
                   alt="D&S Hukuk Bürosu Logo" 
@@ -82,6 +82,7 @@ export const Header: React.FC = () => {
                   <Link 
                     key={title} 
                     href={url}
+                    title={`D&S Hukuk - ${title}`}
                     onClick={handleClick}
                     className={`text-[14px] font-medium transition-all duration-300 relative pb-1 ${isActive ? 'text-white border-b border-[#cfa767]' : 'text-gray-300 hover:text-white'}`}
                   >
@@ -142,6 +143,7 @@ export const Header: React.FC = () => {
                 <Link 
                   key={title} 
                   href={url}
+                  title={`D&S Hukuk - ${title}`}
                   onClick={handleMobileClick}
                   className="text-xl sm:text-2xl lg:text-3xl font-['Times_New_Roman',_Times,_serif] tracking-widest text-gray-300 hover:text-white transition-all duration-300 uppercase hover:scale-105"
                 >
@@ -153,8 +155,8 @@ export const Header: React.FC = () => {
           
           <div className="mt-10 sm:mt-12 flex flex-col items-center space-y-3 pt-8 border-t border-white/10 w-full max-w-xs">
             <span className="text-[#cfa767] text-[11px] sm:text-xs tracking-widest font-semibold uppercase mb-1">BİZE ULAŞIN</span>
-            <a href="tel:+905326814345" className="text-gray-400 hover:text-white transition-colors text-sm">+90 532 681 43 45</a>
-            <a href="mailto:dshukukburosu@outlook.com" className="text-gray-400 hover:text-white transition-colors text-sm">dshukukburosu@outlook.com</a>
+            <a href="tel:+905326814345" title="Av. Onur Demirceylan Telefon: +90 532 681 43 45" className="text-gray-400 hover:text-white transition-colors text-sm">+90 532 681 43 45</a>
+            <a href="mailto:dshukukburosu@outlook.com" title="D&S Hukuk Bürosu E-posta: dshukukburosu@outlook.com" className="text-gray-400 hover:text-white transition-colors text-sm">dshukukburosu@outlook.com</a>
           </div>
         </nav>
       </div>
