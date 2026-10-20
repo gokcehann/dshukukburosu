@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect } from 'react';
-import Script from 'next/script';
-import { ExternalLink, PenLine, CheckCircle2 } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { ExternalLink, PenLine, CheckCircle2, Star } from 'lucide-react';
 import { googleReviewsSummary } from '@/data/reviews';
 
 // Google Official "G" Icon
@@ -28,40 +27,46 @@ const GoogleIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" })
 );
 
 export const GoogleReviews: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // If Elfsight platform script is already loaded on client navigation, trigger re-initialization
-    if (typeof window !== 'undefined' && (window as any).eapps) {
+    const currentContainer = containerRef.current;
+    if (!currentContainer) return;
+
+    // Reset container to avoid duplication on client navigation / fast refresh
+    currentContainer.innerHTML = '';
+
+    const script = document.createElement('script');
+    script.src = 'https://cdn.trustindex.io/loader.js?6c4b96e844a9037b0e06a69c435';
+    script.async = true;
+    script.defer = true;
+
+    currentContainer.appendChild(script);
+
+    // If Trustindex library was already loaded globally in this window session, trigger widget initialization
+    if (typeof window !== 'undefined' && (window as any).Trustindex) {
       try {
-        (window as any).eapps.init?.();
+        (window as any).Trustindex.loadWidgetsFromDom?.();
       } catch (err) {
-        // silent fail
+        // silent fallback
       }
     }
+
+    return () => {
+      if (currentContainer) {
+        currentContainer.innerHTML = '';
+      }
+    };
   }, []);
 
   return (
     <section id="yorumlar" className="py-24 bg-gradient-to-b from-white via-cream/40 to-white relative overflow-hidden">
-      {/* Elfsight Platform Script */}
-      <Script
-        src="https://elfsightcdn.com/platform.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          if (typeof window !== 'undefined' && (window as any).eapps) {
-            try {
-              (window as any).eapps.init?.();
-            } catch (err) {
-              // silent fail
-            }
-          }
-        }}
-      />
-
       {/* Arka Plan Dekoratif Işık Efekti */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Üst Başlık ve Doğrudan Google İşlemleri */}
+        {/* Üst Başlık ve Google Özet Çubuğu */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-semibold tracking-wider uppercase mb-4">
@@ -77,11 +82,11 @@ export const GoogleReviews: React.FC = () => {
               <span className="text-accent">D&S Hukuk Bürosu</span>
             </h2>
             <p className="mt-4 text-text-light max-w-xl text-base leading-relaxed">
-              Hukuki süreçlerinde güvenle yanlarında yer aldığımız müvekkillerimizin Google Haritalar üzerindeki gerçek, bağımsız ve canlı değerlendirmeleri.
+              Hukuki süreçlerinde güvenle yanlarında yer aldığımız müvekkillerimizin Google Haritalar üzerindeki gerçek ve bağımsız değerlendirmeleri.
             </p>
           </div>
 
-          {/* Hızlı Erişim Butonları */}
+          {/* Hızlı Erişim ve Yorum Butonları */}
           <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 shrink-0">
             <a
               href={googleReviewsSummary.googleReviewWriteUrl}
@@ -105,9 +110,9 @@ export const GoogleReviews: React.FC = () => {
           </div>
         </div>
 
-        {/* Elfsight Canlı Google Yorumları Widget'ı */}
-        <div className="min-h-[220px] bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-100">
-          <div className="elfsight-app-1a423fe3-567f-4991-b194-d89602bb99dc" data-elfsight-app-lazy />
+        {/* Trustindex Canlı Google Yorumları Widget Kapsayıcısı */}
+        <div className="min-h-[220px] bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-100/80">
+          <div ref={containerRef} className="trustindex-widget-container" />
         </div>
 
         {/* Alt Çağrı Kartı: Google'da Yorum Yapmaya Teşvik */}
