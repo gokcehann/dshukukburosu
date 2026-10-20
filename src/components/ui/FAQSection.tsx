@@ -1,50 +1,15 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-const faqs: FAQItem[] = [
-  {
-    question: "D&S Hukuk Bürosu'ndan nasıl hukuki danışmanlık veya dava randevusu alabilirim?",
-    answer: "Hukuki uyuşmazlığınız veya danışmanlık talepleriniz için web sitemizdeki iletişim formunu doldurabilir, +90 532 681 43 45 veya +90 532 563 10 73 numaralı telefonlarımızdan doğrudan arayabilir ya da WhatsApp üzerinden kurucu avukatlarımızla hızlıca irtibat kurarak randevunuzu planlayabilirsiniz."
-  },
-  {
-    question: "D&S Hukuk Bürosu hangi alanlarda avukatlık ve hukuki danışmanlık hizmeti sunmaktadır?",
-    answer: "Büromuz; Ceza Hukuku, İş ve Sosyal Güvenlik Hukuku, Aile ve Boşanma Hukuku, Gayrimenkul ve Kira Hukuku, İdare ve Vergi Hukuku, Miras Hukuku, Ticaret Hukuku ve İcra-İflas Hukuku başta olmak üzere geniş bir yelpazede bireysel ve kurumsal müvekkillerine profesyonel dava ve danışmanlık hizmeti sağlamaktadır."
-  },
-  {
-    question: "Erzurum dışındaki çevre illerde ve Türkiye genelinde dava takibi yapıyor musunuz?",
-    answer: "Evet. D&S Hukuk Bürosu merkez olarak Erzurum'da bulunmakla birlikte; Doğu Anadolu Bölgesi'ndeki çevre iller başta olmak üzere Türkiye genelinde yetkili adliyelerde dava, duruşma ve icra takiplerini müvekkilleri adına yürütmektedir."
-  },
-  {
-    question: "Dava açmadan önce arabuluculuk veya uzlaşma süreci nasıl işlemektedir?",
-    answer: "Türk Hukuku mevzuatına göre İş Hukuku tazminat ve alacak davaları, ticari uyuşmazlıklar ve kira tespit/tahliye davalarında dava açmadan önce zorunlu arabuluculuk süreci şarttır. D&S Hukuk Bürosu, müvekkillerinin hak kaybına uğramaması adına arabuluculuk müzakerelerinde profesyonel hukuki temsil sağlamaktadır."
-  },
-  {
-    question: "Avukatlık ve hukuki danışmanlık vekalet ücreti nasıl belirlenir?",
-    answer: "Avukatlık ücretleri; davanın niteliği, kapsamı, uyuşmazlığın konusu ve sarf edilecek hukuki mesai dikkate alınarak Türkiye Barolar Birliği (TBB) ve Erzurum Barosu tarafından her yıl yayımlanan Avukatlık Asgari Ücret Tarifesi esas alınarak taraflarca serbestçe kararlaştırılır."
-  },
-  {
-    question: "Dava dosyamın ve hukuki sürecimin aşamalarını nasıl takip edebilirim?",
-    answer: "Müvekkillerimiz, e-Devlet ve UYAP Vatandaş Portalı üzerinden dosyalarındaki tüm tensip, duruşma zaptı ve kararları anlık inceleyebildikleri gibi; büromuz avukatları her duruşma ve tebligat sonrasında müvekkillerine şeffaf ve düzenli bilgi aktarımı yapmaktadır."
-  },
-  {
-    question: "Avukata vekaletname nasıl ve nereden çıkarılır?",
-    answer: "Vekaletname, Türkiye'deki herhangi bir noterlikten; yurt dışında bulunuyorsanız Türkiye Cumhuriyeti Konsolosluklarından çıkarılabilmektedir. Kurucu avukatlarımız Av. Onur Demirceylan (Erzurum Barosu Sicil No: 903) ve Av. Muhammed Melih Şahin (Erzurum Barosu Sicil No: 911) adına genel dava vekaletnamesi düzenletebilirsiniz. Boşanma ve taşınmaz davaları için fotoğraflı ve özel yetkili vekaletname gerekmektedir."
-  },
-  {
-    question: "Online veya uzaktan hukuki danışmanlık hizmetiniz var mı?",
-    answer: "Evet. Erzurum dışında veya yurt dışında ikamet eden müvekkillerimiz için Zoom, Google Meet, telefon ve WhatsApp üzerinden randevulu online hukuki danışmanlık hizmeti sunmaktayız. Belgeleriniz güvenli dijital kanallardan incelenerek hukuki yol haritanız şeffaf biçimde sunulur."
-  }
-];
+import Link from 'next/link';
+import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react';
+import { allFaqs } from '@/data/faqs';
 
 export const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  // Ana sayfada en çok sorulan ilk 6 soruyu göster
+  const featuredFaqs = allFaqs.slice(0, 6);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -71,11 +36,11 @@ export const FAQSection: React.FC = () => {
 
         {/* Akordeon Listesi */}
         <div className="space-y-4">
-          {faqs.map((faq, index) => {
+          {featuredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div 
-                key={index} 
+                key={faq.id} 
                 className="bg-white border border-gray-200/80 rounded-xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <button
@@ -100,6 +65,18 @@ export const FAQSection: React.FC = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Tüm Sorular Sayfasına Yönlendiren Buton */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/sikca-sorulan-sorular"
+            title="D&S Hukuk Bürosu Sıkça Sorulan Sorular Sayfasını Açın"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white text-xs font-semibold tracking-wider uppercase hover:bg-secondary transition-all shadow-sm"
+          >
+            <span>Tüm Soru & Cevapları İnceleyin (Kapsamlı SSS Rehberi)</span>
+            <ArrowRight className="w-4 h-4 text-accent" />
+          </Link>
         </div>
 
       </div>

@@ -34,9 +34,7 @@ export default async function BlogIndexPage() {
         
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Makaleler</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Hukuki gelişmeler, emsal kararlar ve uzmanlık alanlarımıza dair kaleme aldığımız güncel yazılar.
-          </p>
+          <div className="w-24 h-1 bg-accent mx-auto"></div>
         </div>
 
         {posts.length === 0 ? (

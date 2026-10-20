@@ -11,17 +11,9 @@ import {
   Briefcase, 
   Users, 
   ArrowRight, 
-  MousePointer2, 
   FileText, 
   Home, 
-  PenTool, 
-  ShieldCheck, 
-  Target, 
-  UserCheck, 
-  Gavel, 
-  CheckCircle2, 
-  Building2, 
-  BookOpen 
+  PenTool 
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -63,17 +55,11 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl drop-shadow-md">
-            <span className="inline-block px-3 py-1 bg-accent/20 border border-accent/40 text-accent text-xs font-semibold tracking-widest uppercase mb-4 rounded-sm">
-              Erzurum Avukatlık ve Hukuki Danışmanlık Bürosu
-            </span>
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-serif text-[#F6F5F4] leading-tight mb-2 drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
               D&S HUKUK BÜROSU
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-[#F6F5F4] font-sans tracking-widest uppercase mb-4 drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#F6F5F4] font-sans tracking-widest uppercase mb-8 drop-shadow-[0_3px_3px_rgba(0,0,0,0.8)]">
               DEMİRCEYLAN & ŞAHİN HUKUK BÜROSU
-            </p>
-            <p className="text-gray-200 text-sm sm:text-base font-normal mb-8 max-w-2xl leading-relaxed drop-shadow-[0_2px_3px_rgba(0,0,0,0.8)]">
-              Kurucu avukatlar <strong>Av. Onur Demirceylan</strong> ve <strong>Av. Muhammed Melih Şahin</strong> öncülüğünde; Ceza Hukuku, İş Hukuku, Aile Hukuku, İdare ve Vergi Hukuku uyuşmazlıklarında sonuç odaklı, şeffaf ve profesyonel avukatlık hizmeti.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -92,7 +78,7 @@ export default function HomePage() {
                 variant="primary" 
                 className="px-8 py-4 rounded-none transition-all duration-300 font-medium"
               >
-                Ofisimizle İletişime Geçin
+                Bizimle İletişime Geçin
               </Button>
             </div>
           </div>
@@ -146,16 +132,7 @@ export default function HomePage() {
                   </div>
                   <div className="pt-6">
                     <h3 className="text-xl font-serif font-bold text-primary">{lawyer.name}</h3>
-                    <p className="text-xs text-accent font-semibold tracking-wider uppercase mt-1">
-                      {lawyer.title} • {lawyer.barNumber ? `Erzurum Barosu Sicil No: ${lawyer.barNumber}` : "Erzurum Barosu"}
-                    </p>
-                    <div className="w-8 h-px bg-accent mb-3 mt-3"></div>
-                    <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                      {lawyer.education?.[0]} mezunu olup; ceza davaları, işçi-işveren uyuşmazlıkları ve gayrimenkul ihtilaflarında müvekkillerine Erzurum ve Türkiye genelinde hukuki destek sağlamaktadır.
-                    </p>
-                    <a href={`tel:${lawyer.phone?.replace(/\s+/g, '')}`} className="text-xs font-semibold text-primary hover:text-accent transition-colors">
-                      Telefon: {lawyer.phone}
-                    </a>
+                    <div className="w-8 h-px bg-accent mb-4 mt-4"></div>
                   </div>
                 </div>
               ))}
@@ -175,10 +152,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-4">
               D&S Hukuk Bürosu Çalışma Alanları
             </h2>
-            <div className="w-16 h-0.5 bg-accent mx-auto mb-4"></div>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              Bireysel ve kurumsal müvekkillerimizin karşılaştığı tüm adli ve idari süreçlerde, alanında tecrübeli avukat kadromuzla yanınızdayız.
-            </p>
+            <div className="w-16 h-0.5 bg-accent mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -225,47 +199,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Özellikler Barı */}
-      <section className="bg-[#736A62] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 divide-y lg:divide-y-0 lg:divide-x divide-white/20">
-
-            <div className="flex gap-4 items-start lg:px-6 first:px-0 pt-8 lg:pt-0 first:pt-0">
-              <ShieldCheck className="w-10 h-10 text-white flex-shrink-0" strokeWidth={1.5} />
-              <div>
-                <p className="text-white font-semibold mb-2">Güven & Meslek Etiği</p>
-                <p className="text-white/80 text-sm leading-relaxed">Müvekkillerimizle kurduğumuz karşılıklı güven ve sır saklama yükümlülüğü en temel ilkemizdir.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 items-start lg:px-6 pt-8 lg:pt-0">
-              <Target className="w-10 h-10 text-white flex-shrink-0" strokeWidth={1.5} />
-              <div>
-                <p className="text-white font-semibold mb-2">Şeffaf Dava Takibi</p>
-                <p className="text-white/80 text-sm leading-relaxed">Dava dilekçeleri, duruşma tutanakları ve kararlar anında müvekkillerimizle paylaşılır.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 items-start lg:px-6 pt-8 lg:pt-0">
-              <MousePointer2 className="w-10 h-10 text-white flex-shrink-0" strokeWidth={1.5} />
-              <div>
-                <p className="text-white font-semibold mb-2">Etkin Hukuki Strateji</p>
-                <p className="text-white/80 text-sm leading-relaxed">Güncel mevzuat ve Yargıtay içtihatları analiz edilerek en doğru savunma stratejisi kurgulanır.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-4 items-start lg:px-6 pt-8 lg:pt-0">
-              <UserCheck className="w-10 h-10 text-white flex-shrink-0" strokeWidth={1.5} />
-              <div>
-                <p className="text-white font-semibold mb-2">Kişiye Özel Çözüm</p>
-                <p className="text-white/80 text-sm leading-relaxed">Her hukuki uyuşmazlığın kendine has dinamikleri vardır; dosyanıza özel çözümler üretiriz.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* Kurumsal Bilgilendirme & Kapsamlı İçerik (Erzurum Avukatlık ve Hukuki Danışmanlık) */}
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -273,9 +206,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
             <div className="lg:col-span-7">
-              <span className="block text-accent font-semibold tracking-widest text-xs uppercase mb-3">
-                ERZURUM AVUKATLIK BÜROSU
-              </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary mb-6 leading-tight">
                 D&S Hukuk Bürosu ile Güvenilir ve Sonuç Odaklı Hukuki Temsil
               </h2>
@@ -347,40 +277,6 @@ export default function HomePage() {
             </div>
 
           </div>
-
-          {/* Erzurum ve Çevre İllerde Dava Hizmetleri Bilgilendirme Kutuları */}
-          <div className="mt-16 pt-16 border-t border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#FAF8F5] p-6 rounded-xl border border-gray-200/60">
-              <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
-                <Gavel className="w-5 h-5" />
-              </div>
-              <h3 className="font-serif font-bold text-primary text-lg mb-2">Erzurum Adliyesi & Mahkemeler</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Erzurum Ağır Ceza Mahkemeleri, Asliye Hukuk ve Ceza Mahkemeleri, İş Mahkemesi, Aile Mahkemesi ve İcra Dairelerinde duruşma ve dosya takibi bizzat yürütülmektedir.
-              </p>
-            </div>
-
-            <div className="bg-[#FAF8F5] p-6 rounded-xl border border-gray-200/60">
-              <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
-                <Building2 className="w-5 h-5" />
-              </div>
-              <h3 className="font-serif font-bold text-primary text-lg mb-2">Bölgesel ve Ulusal Dava Takibi</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Erzurum Bölge Adliye Mahkemesi (İstinaf) ve Yargıtay kanun yolu süreçlerinin yanı sıra Erzincan, Kars, Ağrı ve çevre illerdeki davalarda da hukuki temsil sağlanmaktadır.
-              </p>
-            </div>
-
-            <div className="bg-[#FAF8F5] p-6 rounded-xl border border-gray-200/60">
-              <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-4">
-                <BookOpen className="w-5 h-5" />
-              </div>
-              <h3 className="font-serif font-bold text-primary text-lg mb-2">Önleyici Danışmanlık & Sözleşmeler</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Şirketler ve şahıslar için ticari sözleşmeler, iş sözleşmeleri, kira kontratları ve arabuluculuk müzakerelerinde profesyonel hukuki koruma ve danışmanlık.
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
 

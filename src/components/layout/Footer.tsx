@@ -128,6 +128,7 @@ export const Footer: React.FC = () => {
               <li><Link href="/" title="D&S Hukuk Bürosu Ana Sayfa" className="hover:text-white text-gray-400 transition-colors">Ana Sayfa</Link></li>
               <li><Link href="/hakkimizda" title="D&S Hukuk Bürosu Hakkımızda" className="hover:text-white text-gray-400 transition-colors">Hakkımızda</Link></li>
               <li><Link href="/hizmetler" title="D&S Hukuk Bürosu Çalışma Alanlarımız" className="hover:text-white text-gray-400 transition-colors">Hizmetlerimiz</Link></li>
+              <li><Link href="/sikca-sorulan-sorular" title="D&S Hukuk Sıkça Sorulan Sorular (SSS)" className="hover:text-white text-gray-400 transition-colors">Sıkça Sorulan Sorular</Link></li>
               <li><Link href="/#avukatlarimiz" title="D&S Hukuk Kurucu Avukatlarımız" className="hover:text-white text-gray-400 transition-colors">Avukatlarımız</Link></li>
               <li><Link href="/#yorumlar" title="Google Müvekkil Yorumları ve Değerlendirmeleri" className="hover:text-white text-gray-400 transition-colors">Google Yorumları</Link></li>
               <li><Link href="/blog" title="Hukuki Makaleler ve Güncel Bilgiler" className="hover:text-white text-gray-400 transition-colors">Makaleler</Link></li>

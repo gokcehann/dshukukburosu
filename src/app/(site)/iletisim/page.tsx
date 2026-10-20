@@ -362,13 +362,13 @@ export default function ContactPage() {
         {/* CSS Filter ile Karanlık Temalı Harita */}
         <div className="h-[450px] md:h-[600px] w-full relative z-0 opacity-80 mix-blend-luminosity">
           <iframe
-            src="https://maps.google.com/maps?q=39.9119290908742,41.263239175025014&hl=tr&z=17&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6120.6138195155345!2d41.25727227731758!3d39.91214747063207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406e5f844a011491%3A0x1528a38d99aad21f!2sD%26S%20Hukuk%20Av.%20Onur%20DEM%C4%B0RCEYLAN%20-%20Av.%20Muhammed%20Melih%20%C5%9EAH%C4%B0N!5e0!3m2!1str!2str!4v1792535100085!5m2!1str!2str"
             width="100%"
             height="100%"
             allowFullScreen={false}
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="D&S Hukuk Bürosu Konum"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="D&S Hukuk Av. Onur DEMİRCEYLAN - Av. Muhammed Melih ŞAHİN Konum"
             className="w-full h-full border-0 invert-[90%] hue-rotate-180 contrast-[85%]"
           ></iframe>
         </div>

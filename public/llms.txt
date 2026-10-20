@@ -27,4 +27,5 @@
 - [Hakkımızda](https://www.dshukukerzurum.com/hakkimizda): Kurumsal ilkeler, avukat profilleri ve vizyon.
 - [Hizmetler](https://www.dshukukerzurum.com/hizmetler): Dava ve hukuki danışmanlık hizmetlerinin detayları.
 - [Hukuki Makaleler](https://www.dshukukerzurum.com/blog): Güncel hukuki gelişmeler, Yargıtay emsal kararları ve bilgilendirici yazılar.
+- [Sıkça Sorulan Sorular (SSS)](https://www.dshukukerzurum.com/sikca-sorulan-sorular): Vekaletname çıkarma, avukatlık vekalet ücreti, arabuluculuk ve dava aşamaları hakkında rehber.
 - [İletişim](https://www.dshukukerzurum.com/iletisim): Randevu oluşturma, iletişim formu, telefon numaraları ve açık ofis adresi.
