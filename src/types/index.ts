@@ -50,6 +50,7 @@ export interface IGoogleReview {
   relativeTime: string;
   text: string;
   serviceCategory?: string;
+  avatarPhotoUrl?: string;
   reply?: {
     author: string;
     date: string;

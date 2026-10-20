@@ -11,9 +11,9 @@ export const googleReviewsSummary: IGoogleReviewsSummary = {
     1: 0,
   },
   // Google Haritalar profil bağlantısı
-  googleMapsUrl: 'https://maps.app.goo.gl/AdUHwUWpqg55JBdk6?g_st=iw',
-  // Google'da doğrudan inceleme/yorum bırakma bağlantısı
-  googleReviewWriteUrl: 'https://maps.app.goo.gl/AdUHwUWpqg55JBdk6?g_st=iw',
+  googleMapsUrl: 'https://www.google.com/maps/place/?q=place_id:ChIJkRQBSoRfbkARH9KqmY2jKBU',
+  // Google'da doğrudan inceleme/yorum bırakma penceresi bağlantısı
+  googleReviewWriteUrl: 'https://search.google.com/local/writereview?placeid=ChIJkRQBSoRfbkARH9KqmY2jKBU',
 };
 
 export const mockGoogleReviews: IGoogleReview[] = [
