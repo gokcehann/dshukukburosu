@@ -69,21 +69,10 @@ export const GoogleReviews: React.FC = () => {
         {/* Üst Başlık ve Google Özet Çubuğu */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-semibold tracking-wider uppercase mb-4">
-              <GoogleIcon className="w-4 h-4" />
-              <span>Google İşletme Değerlendirmeleri</span>
-              <span className="inline-flex items-center gap-1 ml-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
-                CANLI YORUMLAR
-              </span>
-            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary tracking-tight leading-tight">
               Müvekkillerimizin Gözünden<br />
               <span className="text-accent">D&S Hukuk Bürosu</span>
             </h2>
-            <p className="mt-4 text-text-light max-w-xl text-base leading-relaxed">
-              Hukuki süreçlerinde güvenle yanlarında yer aldığımız müvekkillerimizin Google Haritalar üzerindeki gerçek ve bağımsız değerlendirmeleri.
-            </p>
           </div>
 
           {/* Hızlı Erişim ve Yorum Butonları */}

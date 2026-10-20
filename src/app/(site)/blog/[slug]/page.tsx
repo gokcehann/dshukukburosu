@@ -29,16 +29,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="bg-primary min-h-screen pt-32 pb-24">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <Link href="/blog" className="text-accent hover:text-primary transition-colors text-sm font-medium mb-8 inline-block">
+        <Link href="/blog" className="text-accent hover:text-white transition-colors text-sm font-medium mb-8 inline-flex items-center gap-2">
           &larr; Makalelere Dön
         </Link>
 
-        <article className="bg-white p-8 sm:p-12 rounded-lg shadow-sm border border-gray-100">
+        <article className="bg-white p-8 sm:p-12 md:p-16 rounded-xl shadow-sm border border-gray-100">
           
           {post.mainImage && (
-            <div className="mb-10 rounded-lg overflow-hidden h-64 sm:h-96 w-full relative">
+            <div className="mb-10 rounded-xl overflow-hidden h-72 sm:h-[460px] w-full relative shadow-sm">
               <img 
                 src={urlForImage(post.mainImage)?.url() as string} 
                 alt={post.title} 
@@ -47,8 +47,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           )}
 
-          <header className="mb-10 text-center border-b border-gray-100 pb-10">
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4 leading-tight">
+          <header className="mb-10 text-center border-b border-gray-100 pb-10 max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary mb-4 leading-tight">
               {post.title}
             </h1>
             <div className="flex justify-center items-center gap-4 text-xs text-gray-500 font-medium">
@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           </header>
           
-          <div className="prose prose-lg max-w-none text-gray-600 prose-headings:text-primary prose-a:text-accent hover:prose-a:text-primary transition-colors prose-img:rounded-lg text-justify">
+          <div className="prose prose-lg max-w-4xl mx-auto text-gray-600 prose-headings:text-primary prose-a:text-accent hover:prose-a:text-accent-hover transition-colors prose-img:rounded-xl text-justify leading-relaxed">
             {post.body ? (
               <PortableText value={post.body} />
             ) : (
