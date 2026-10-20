@@ -39,14 +39,22 @@ const localBusinessSchema = {
   "name": "D&S Hukuk Bürosu",
   "image": "https://dshukukerzurum.com/logo.png",
   "url": "https://dshukukerzurum.com",
-  "telephone": "+902125550123",
+  "telephone": "+905326814345",
+  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Hukuk Plaza, Kat:4 No:12",
-    "addressLocality": "Şişli",
-    "addressRegion": "İstanbul",
-    "postalCode": "34000",
+    "streetAddress": "Ömer Nasuhi Bilmen Mh. İstanbul Kapı Cd. Gümrük Sk. Necati Kervancı Apt. K:6/13",
+    "addressLocality": "Yakutiye",
+    "addressRegion": "Erzurum",
+    "postalCode": "25100",
     "addressCountry": "TR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "24",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 };
 

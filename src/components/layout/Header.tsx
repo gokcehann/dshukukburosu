@@ -34,6 +34,7 @@ export const Header: React.FC = () => {
   const navLinks = [
     ['Ana Sayfa', '/'],
     ['Avukatlarımız', '/#avukatlarimiz'],
+    ['Yorumlar', '/#yorumlar'],
     ['Hakkımızda', '/hakkimizda'],
     ['Makaleler', '/blog'],
     ['İletişim', '/iletisim'],

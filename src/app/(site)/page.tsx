@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { GoogleReviews } from "@/components/ui/GoogleReviews";
 import { mockServices, mockLawyers } from "@/lib/mock-data";
 import { Scale, Briefcase, Users, ArrowRight, MousePointer2, FileText, Home, PenTool, ShieldCheck, Target, UserCheck } from "lucide-react";
 import { MapPinAreaIcon as MapPin, PhoneCallIcon as Phone, EnvelopeIcon as Mail, ClockIcon as Clock } from "@/components/ui/CustomIcons";
@@ -156,6 +157,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Google Yorumları & Değerlendirmeler */}
+      <GoogleReviews />
 
       {/* İletişim Bilgileri ve Harita */}
       <section id="iletisim-homepage" className="bg-background py-16 border-t border-white/5">

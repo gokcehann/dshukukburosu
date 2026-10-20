@@ -62,6 +62,7 @@ export const Footer: React.FC = () => {
               <li><a href="/" className="hover:text-white text-gray-400 transition-colors">Ana Sayfa</a></li>
               <li><a href="/hakkimizda" className="hover:text-white text-gray-400 transition-colors">Hakkımızda</a></li>
               <li><a href="/#avukatlarimiz" className="hover:text-white text-gray-400 transition-colors">Avukatlarımız</a></li>
+              <li><a href="/#yorumlar" className="hover:text-white text-gray-400 transition-colors">Google Yorumları</a></li>
               <li><a href="/blog" className="hover:text-white text-gray-400 transition-colors">Makaleler</a></li>
               <li><a href="/iletisim" className="hover:text-white text-gray-400 transition-colors">İletişim</a></li>
             </ul>

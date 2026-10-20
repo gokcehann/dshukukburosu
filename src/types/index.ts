@@ -39,3 +39,29 @@ export interface IContactMessage {
   message: string;
   createdAt?: string;
 }
+
+export interface IGoogleReview {
+  id: string;
+  authorName: string;
+  authorInitials: string;
+  authorRole?: string;
+  avatarBgColor?: string;
+  rating: number;
+  relativeTime: string;
+  text: string;
+  serviceCategory?: string;
+  reply?: {
+    author: string;
+    date: string;
+    text: string;
+  };
+}
+
+export interface IGoogleReviewsSummary {
+  averageRating: number;
+  totalReviews: number;
+  starsCount: { [key: number]: number };
+  googleMapsUrl: string;
+  googleReviewWriteUrl: string;
+}
+
