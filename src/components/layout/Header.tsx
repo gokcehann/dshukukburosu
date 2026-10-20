@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { EmailLink } from '@/components/ui/EmailLink';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,9 +51,12 @@ export const Header: React.FC = () => {
             {/* Logo Left */}
             <div className="absolute left-0 flex items-center">
               <Link href="/" title="D&S Hukuk Bürosu Ana Sayfa" className="flex items-center gap-4 group">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="D&S Hukuk Bürosu Logo" 
+                  width={80}
+                  height={80}
+                  priority
                   className="h-16 sm:h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" 
                 />
                 <div className="flex flex-col justify-center items-start mt-1">
@@ -118,9 +123,11 @@ export const Header: React.FC = () => {
         
         <nav className="flex flex-col items-center w-full max-h-screen overflow-y-auto py-12 px-4">
           <div className="flex flex-col items-center mb-8 sm:mb-10">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="D&S Hukuk Bürosu Logo" 
+              width={80}
+              height={80}
               className="h-16 sm:h-20 w-auto object-contain opacity-80" 
             />
           </div>
@@ -156,7 +163,7 @@ export const Header: React.FC = () => {
           <div className="mt-10 sm:mt-12 flex flex-col items-center space-y-3 pt-8 border-t border-white/10 w-full max-w-xs">
             <span className="text-[#cfa767] text-[11px] sm:text-xs tracking-widest font-semibold uppercase mb-1">BİZE ULAŞIN</span>
             <a href="tel:+905326814345" title="Av. Onur Demirceylan Telefon: +90 532 681 43 45" className="text-gray-400 hover:text-white transition-colors text-sm">+90 532 681 43 45</a>
-            <a href="mailto:dshukukburosu@outlook.com" title="D&S Hukuk Bürosu E-posta: dshukukburosu@outlook.com" className="text-gray-400 hover:text-white transition-colors text-sm">dshukukburosu@outlook.com</a>
+            <EmailLink className="text-gray-400 hover:text-white transition-colors text-sm" />
           </div>
         </nav>
       </div>

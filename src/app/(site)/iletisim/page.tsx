@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, CheckCircle2, Send, ArrowRight, AlertCircle, Loader2 } from "lucide-react";
 import { MapPinAreaIcon as MapPin, PhoneCallIcon as Phone, EnvelopeIcon as Mail, ClockIcon as Clock } from "@/components/ui/CustomIcons";
+import { EmailLink } from "@/components/ui/EmailLink";
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -132,15 +133,17 @@ export default function ContactPage() {
               </div>
 
               {/* E-posta Kartı */}
-              <a href="mailto:dshukukburosu@outlook.com" title="D&S Hukuk Bürosu E-posta Gönder: dshukukburosu@outlook.com" className="group flex items-center p-6 sm:p-8">
+              <div className="group flex items-center p-6 sm:p-8">
                 <div className="w-12 h-12 rounded-full bg-[#0a0f13] border border-[#cfa767]/20 flex items-center justify-center flex-shrink-0 mr-5 group-hover:bg-[#cfa767]/10 transition-colors">
                   <Mail className="text-[#cfa767] w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-white text-[11px] md:text-xs tracking-[0.15em] uppercase font-semibold mb-1">E-posta Adresi</h3>
-                  <p className="text-gray-400 text-[13px] md:text-sm group-hover:text-gray-300 transition-colors">dshukukburosu@outlook.com</p>
+                  <div className="text-gray-400 text-[13px] md:text-sm group-hover:text-gray-300 transition-colors">
+                    <EmailLink className="hover:text-[#cfa767] transition-colors" />
+                  </div>
                 </div>
-              </a>
+              </div>
 
               {/* Çalışma Saatleri Kartı */}
               <div className="flex items-start p-6 sm:p-8">
@@ -362,12 +365,11 @@ export default function ContactPage() {
             src="https://maps.google.com/maps?q=39.9119290908742,41.263239175025014&hl=tr&z=17&output=embed"
             width="100%"
             height="100%"
-            style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(85%)' }}
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="D&S Hukuk Bürosu Konum"
-            className="w-full h-full"
+            className="w-full h-full border-0 invert-[90%] hue-rotate-180 contrast-[85%]"
           ></iframe>
         </div>
 

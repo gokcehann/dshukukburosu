@@ -5,8 +5,8 @@ import { ArrowRight, Scale, Briefcase, Users } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Çalışma Alanlarımız",
-  description: "D.S. Hukuk Bürosu olarak sunduğumuz tüm hukuki danışmanlık ve dava takibi hizmetleri.",
+  title: "Çalışma Alanlarımız | D&S Hukuk Bürosu",
+  description: "D&S Hukuk Bürosu olarak Erzurum ve Türkiye genelinde sunduğumuz ceza, iş, aile, idare ve gayrimenkul hukuku alanlarındaki dava ve danışmanlık hizmetlerimiz.",
 };
 
 const getIcon = (iconName: string) => {

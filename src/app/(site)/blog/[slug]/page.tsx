@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { urlForImage } from '@/sanity/lib/image';
 import { PortableText } from '@portabletext/react';
@@ -17,6 +18,20 @@ async function getPost(slug: string) {
     }
   `;
   return await client.fetch(query, { slug }, { next: { revalidate: 60 } });
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const post = await getPost(resolvedParams.slug);
+  if (!post) {
+    return {
+      title: "Makale Bulunamadı | D&S Hukuk Bürosu",
+    };
+  }
+  return {
+    title: `${post.title} | D&S Hukuk Bürosu`,
+    description: `${post.title} - D&S Hukuk Bürosu avukatlarının detaylı hukuki incelemesi ve emsal değerlendirmesi.`,
+  };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -33,30 +33,59 @@ export const GoogleReviews: React.FC = () => {
     const currentContainer = containerRef.current;
     if (!currentContainer) return;
 
-    // Reset container to avoid duplication on client navigation / fast refresh
-    currentContainer.innerHTML = '';
+    let isLoaded = false;
 
-    const script = document.createElement('script');
-    script.src = 'https://cdn.trustindex.io/loader.js?6c4b96e844a9037b0e06a69c435';
-    script.async = true;
-    script.defer = true;
+    const loadScript = () => {
+      if (isLoaded || !currentContainer) return;
+      isLoaded = true;
 
-    currentContainer.appendChild(script);
+      // Reset container to avoid duplication on client navigation / fast refresh
+      currentContainer.innerHTML = '';
 
-    // If Trustindex library was already loaded globally in this window session, trigger widget initialization
-    if (typeof window !== 'undefined' && (window as any).Trustindex) {
-      try {
-        (window as any).Trustindex.loadWidgetsFromDom?.();
-      } catch (err) {
-        // silent fallback
-      }
-    }
+      const script = document.createElement('script');
+      script.src = 'https://cdn.trustindex.io/loader.js?6c4b96e844a9037b0e06a69c435';
+      script.async = true;
+      script.defer = true;
 
-    return () => {
-      if (currentContainer) {
-        currentContainer.innerHTML = '';
+      currentContainer.appendChild(script);
+
+      // If Trustindex library was already loaded globally in this window session, trigger widget initialization
+      if (typeof window !== 'undefined' && (window as any).Trustindex) {
+        try {
+          (window as any).Trustindex.loadWidgetsFromDom?.();
+        } catch (err) {
+          // silent fallback
+        }
       }
     };
+
+    // Use IntersectionObserver so the heavy external script only loads when user scrolls near the reviews section
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            loadScript();
+            observer.disconnect();
+          }
+        },
+        { rootMargin: '300px' }
+      );
+      observer.observe(currentContainer);
+
+      return () => {
+        observer.disconnect();
+        if (currentContainer) {
+          currentContainer.innerHTML = '';
+        }
+      };
+    } else {
+      loadScript();
+      return () => {
+        if (currentContainer) {
+          currentContainer.innerHTML = '';
+        }
+      };
+    }
   }, []);
 
   return (

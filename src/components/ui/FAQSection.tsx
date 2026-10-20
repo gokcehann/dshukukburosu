@@ -32,6 +32,14 @@ const faqs: FAQItem[] = [
   {
     question: "Dava dosyamın ve hukuki sürecimin aşamalarını nasıl takip edebilirim?",
     answer: "Müvekkillerimiz, e-Devlet ve UYAP Vatandaş Portalı üzerinden dosyalarındaki tüm tensip, duruşma zaptı ve kararları anlık inceleyebildikleri gibi; büromuz avukatları her duruşma ve tebligat sonrasında müvekkillerine şeffaf ve düzenli bilgi aktarımı yapmaktadır."
+  },
+  {
+    question: "Avukata vekaletname nasıl ve nereden çıkarılır?",
+    answer: "Vekaletname, Türkiye'deki herhangi bir noterlikten; yurt dışında bulunuyorsanız Türkiye Cumhuriyeti Konsolosluklarından çıkarılabilmektedir. Kurucu avukatlarımız Av. Onur Demirceylan (Erzurum Barosu Sicil No: 903) ve Av. Muhammed Melih Şahin (Erzurum Barosu Sicil No: 911) adına genel dava vekaletnamesi düzenletebilirsiniz. Boşanma ve taşınmaz davaları için fotoğraflı ve özel yetkili vekaletname gerekmektedir."
+  },
+  {
+    question: "Online veya uzaktan hukuki danışmanlık hizmetiniz var mı?",
+    answer: "Evet. Erzurum dışında veya yurt dışında ikamet eden müvekkillerimiz için Zoom, Google Meet, telefon ve WhatsApp üzerinden randevulu online hukuki danışmanlık hizmeti sunmaktayız. Belgeleriniz güvenli dijital kanallardan incelenerek hukuki yol haritanız şeffaf biçimde sunulur."
   }
 ];
 

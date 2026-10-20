@@ -1,7 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { urlForImage } from '@/sanity/lib/image';
+
+export const metadata: Metadata = {
+  title: "Hukuki Makaleler ve Güncel Kararlar | D&S Hukuk Bürosu",
+  description: "D&S Hukuk Bürosu avukatlarının ceza hukuku, işçi alacakları, boşanma davaları ve güncel Yargıtay emsal kararlarına dair bilgilendirici hukuki makaleleri.",
+};
 
 // Sanity'den tüm makaleleri çeken asenkron fonksiyon
 async function getPosts() {
