@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { GoogleReviews } from "@/components/ui/GoogleReviews";
-import { FAQSection } from "@/components/ui/FAQSection";
 import { MapSection } from "@/components/ui/MapSection";
 import { mockServices, mockLawyers } from "@/lib/mock-data";
 import { 
@@ -282,86 +281,6 @@ export default function HomePage() {
 
       {/* Google Yorumları & Değerlendirmeler */}
       <GoogleReviews />
-
-      {/* Sıkça Sorulan Sorular Bölümü */}
-      <FAQSection />
-
-      {/* SSS İçin FAQPage JSON-LD Şeması */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "D&S Hukuk Bürosu'ndan nasıl hukuki danışmanlık veya dava randevusu alabilirim?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Web sitemizdeki iletişim formunu doldurabilir, +90 532 681 43 45 veya +90 532 563 10 73 numaralı telefonlarımızdan doğrudan arayabilir ya da WhatsApp üzerinden kurucu avukatlarımızla hızlıca irtibat kurarak randevunuzu planlayabilirsiniz."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "D&S Hukuk Bürosu hangi alanlarda avukatlık ve hukuki danışmanlık hizmeti sunmaktadır?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Büromuz; Ceza Hukuku, İş ve Sosyal Güvenlik Hukuku, Aile ve Boşanma Hukuku, Gayrimenkul ve Kira Hukuku, İdare ve Vergi Hukuku, Miras Hukuku, Ticaret Hukuku ve İcra-İflas Hukuku başta olmak üzere geniş bir yelpazede avukatlık hizmeti sağlamaktadır."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Erzurum dışındaki çevre illerde ve Türkiye genelinde dava takibi yapıyor musunuz?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Evet. D&S Hukuk Bürosu merkez olarak Erzurum'da bulunmakla birlikte Doğu Anadolu Bölgesi'ndeki çevre iller başta olmak üzere Türkiye genelinde yetkili adliyelerde dava, duruşma ve icra takiplerini yürütmektedir."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Dava açmadan önce arabuluculuk veya uzlaşma süreci nasıl işlemektedir?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "İş Hukuku alacakları, ticari davalar ve kira uyuşmazlıklarında dava şartı zorunlu arabuluculuk bulunmaktadır. D&S Hukuk Bürosu, arabuluculuk müzakerelerinde müvekkillerine profesyonel hukuki temsil desteği sağlar."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Avukatlık ve hukuki danışmanlık vekalet ücreti nasıl belirlenir?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Avukatlık ücretleri; davanın niteliği, hukuki mesaisi dikkate alınarak Türkiye Barolar Birliği ve Erzurum Barosu Avukatlık Asgari Ücret Tarifesi esas alınarak belirlenir."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Dava dosyamın ve hukuki sürecimin aşamalarını nasıl takip edebilirim?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Müvekkillerimiz, e-Devlet ve UYAP Vatandaş Portalı üzerinden dosyalarındaki tüm tensip, duruşma zaptı ve kararları anlık inceleyebildikleri gibi; büromuz avukatları her duruşma ve tebligat sonrasında müvekkillerine şeffaf ve düzenli bilgi aktarımı yapmaktadır."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Avukata vekaletname nasıl ve nereden çıkarılır?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Vekaletname, Türkiye'deki herhangi bir noterlikten veya yurt dışında bulunuyorsanız Türkiye Cumhuriyeti Konsolosluklarından çıkarılabilmektedir. Kurucu avukatlarımız Av. Onur Demirceylan (Erzurum Barosu Sicil No: 903) ve Av. Muhammed Melih Şahin (Erzurum Barosu Sicil No: 911) bilgilerini notere ileterek vekaletnamenizi düzenletebilirsiniz."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Online veya uzaktan hukuki danışmanlık hizmetiniz var mı?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Evet. Erzurum dışında veya yurt dışında ikamet eden müvekkillerimiz için Zoom, Google Meet, telefon ve WhatsApp üzerinden randevulu online hukuki danışmanlık hizmeti sunmaktayız."
-                }
-              }
-            ]
-          })
-        }}
-      />
 
       {/* İletişim Bilgileri ve Harita Bölümü */}
       <MapSection />

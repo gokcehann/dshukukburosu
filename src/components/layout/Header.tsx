@@ -38,7 +38,6 @@ export const Header: React.FC = () => {
     ['Avukatlarımız', '/#avukatlarimiz'],
     ['Hizmetlerimiz', '/hizmetler'],
     ['Hakkımızda', '/hakkimizda'],
-    ['SSS', '/sikca-sorulan-sorular'],
     ['Makaleler', '/blog'],
     ['İletişim', '/iletisim'],
   ];
@@ -48,9 +47,9 @@ export const Header: React.FC = () => {
       {/* Normal Header (At the top) */}
       <header className="absolute top-0 left-0 w-full z-40 bg-transparent text-white pt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative flex justify-center items-center h-24">
+          <div className="relative flex justify-between items-center h-24 gap-12 xl:gap-20">
             {/* Logo Left */}
-            <div className="absolute left-0 flex items-center">
+            <div className="flex items-center shrink-0">
               <Link href="/" title="D&S Hukuk Bürosu Ana Sayfa" className="flex items-center gap-4 group">
                 <Image 
                   src="/logo.png" 
@@ -68,7 +67,7 @@ export const Header: React.FC = () => {
             </div>
 
             {/* Navigation Centered (Hidden on scroll or mobile) */}
-            <nav className={`hidden lg:flex space-x-10 items-center transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+            <nav className={`hidden lg:flex gap-7 xl:gap-10 items-center transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
               {navLinks.map(([title, url]) => {
                 // Ana sayfa için tam eşleşme, diğer sayfalar için normal eşleşme (çapa linkleri hariç)
                 const isActive = url === '/' ? pathname === '/' : pathname === url;
